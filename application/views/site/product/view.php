@@ -2,7 +2,7 @@
 		<section class="hero_in tours_detail">
 			<div class="wrapper">
 				<div class="container">
-					<h1 class="fadeInUp"><span></span><?php echo $product->name?></h1>
+					<h1 class="fadeInUp"><span></span><?php echo $product->TenSanPham?></h1>
 				</div>
 				<span class="magnific-gallery">
 					<a href="img/gallery/tour_list_1.jpg" class="btn_photos" title="Photo title" data-effect="mfp-zoom-in">Xem Hình Ảnh</a>
@@ -18,26 +18,16 @@
 				<div class="row">
 					<div class="col-lg-8">
 							<h2>Mô tả sản phẩm</h2>
-							<p><?php echo $product->content?></p>
+							<p><?php echo $product->MoTa?></p>
 							<hr>
 							<h3>Thông số sản phẩm</h3>
 							<div class="row">
-								<div class="col-lg-6">
-									<ul class="bullets">
-										<li>Dolorem mediocritatem</li>
-										<li>Mea appareat</li>
-										<li>Prima causae</li>
-										<li>Singulis indoctum</li>
-									</ul>
-								</div>
-								<div class="col-lg-6">
-									<ul class="bullets">
-										<li>Timeam inimicus</li>
-										<li>Oportere democritum</li>
-										<li>Cetero inermis</li>
-										<li>Pertinacia eum</li>
-									</ul>
-								</div>
+                                                            <ul class="bullets">
+                                                                <li>Chất liệu: <?php echo $product->ChatLieu ?></li>
+                                                                <li>Màu Sắc: <?php echo $product->MauSac ?></li>
+                                                                <li>Kích Thước: <?php echo $product->KichThuoc ?></li>
+                                                                <li>Xuất Xứ: <?php echo $product->XuatXu ?></li>
+                                                            </ul>
 							</div>
 
 														
@@ -50,7 +40,7 @@
 						<div class="box_detail booking">
 							<div class="price">
 								<div class="score"><span>Giá đã giảm</span><strong>70%</strong></div>
-								<span><?php echo number_format($product->price)?> <small>Giá ưu đãi</small></span>
+								<span><?php echo $product->Gia ?> <small>Giá ưu đãi</small></span>
 								
 							</div>
 							<div class="panel-dropdown">

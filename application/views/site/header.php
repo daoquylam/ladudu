@@ -8,7 +8,24 @@
 		</div>
 		<ul id="top_menu">
 			<li><a href="" class="cart-menu-btn" title="Cart"><strong>1</strong></a></li>
-                        <li><a href="<?php echo base_url('register') ?>" class="login" title="Đăng Nhập/Đăng Ký">Đăng Nhập/Đăng ký</a></li>
+                        <?php if(isset($_SESSION['user_id_login'])){ ?>
+                               
+                                <li>
+				<div class="dropdown dropdown-user">
+					<a href="#0" class="logged" data-toggle="dropdown" title="Logged"><img src="<?php echo public_url();?>/site/img/avatar.jpg" alt=""></a>
+					<div class="dropdown-menu">
+						<ul>
+							<li><a href="#">Tên: <?php echo $_SESSION['user_info']->HoTen ?></a></li>
+                                                        <li><a href="#">Email: <?php echo $_SESSION['user_info']->Email ?></a></li>
+							<li><a href="#">Logout</a></li>
+						</ul>
+					</div>
+				</div>
+			</li>
+                            <?php } else{ ?>
+                        
+                                <li><a href="<?php echo base_url('register') ?>" class="login" title="Đăng Nhập/Đăng Ký">Đăng Nhập/Đăng ký</a></li>
+                            <?php } ?>
 		</ul>
 		<!-- /top_menu -->
 		<a href="#menu" class="btn_mobile">
@@ -21,8 +38,8 @@
 		<nav id="menu" class="main-menu">
 			<ul>
 				<li><span><a href="index.php">Trang chủ</a></span></li>
-				<li><span><a href="<?php echo base_url('product/catalog/12') ?>">Gỗ Nguyên Liệu</a></span></li>
-				<li><span><a href="<?php echo base_url('product/catalog/16') ?>">Nội thất gỗ</a></span></li>
+				<li><span><a href="<?php echo base_url('product/catalog/1') ?>">Gỗ Nguyên Liệu</a></span></li>
+				<li><span><a href="<?php echo base_url('product/catalog/2') ?>">Nội thất gỗ</a></span></li>
 				<li><span><a href="about.html">Giới thiệu</a></span></li>
 				<li><span><a href="contacts.html">Liên hệ</a></span></li>
 				<li><span><a href=""></a></span></li>
