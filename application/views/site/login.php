@@ -41,6 +41,9 @@
 			<figure>
 				<a href="<?php echo base_url();?>"><img src="<?php echo public_url();?>/site/img/logo_sticky.png" width="155" height="36" data-retina="true" alt="" class="logo_sticky"></a>
 			</figure>
+                        <?php if(isset($message)){?>
+                            <div><?php echo $message?></div>
+                        <?php } ?>
 			  <form method="POST" action="<?php echo base_url('/login/check') ?>">
 				
 				<div class="form-group">

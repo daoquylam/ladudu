@@ -35,6 +35,7 @@ class register extends MY_Controller{
             $this->form_validation->set_rules('password', 'Mật khẩu', 'required|min_length[6]');
             $this->form_validation->set_rules('re_password', 'Mật khẩu nhập lại', 'matches[password]');
             $this->form_validation->set_rules('phone', 'Số điện thoại', 'required|exact_length[10]|numeric');
+            $this->form_validation->set_rules('address', 'Địa chỉ', 'required');
             if($this->form_validation->run())
             {
                 //them vao csdl

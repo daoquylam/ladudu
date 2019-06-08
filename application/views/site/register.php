@@ -46,7 +46,7 @@
 				<div class="form-group">
 					<label>Số điện thoại</label>
                                         <input class="form-control" type="text" name="phone" value="<?php echo set_value('phone')?>">
-					<i class="ti-user"></i>
+					<i class=" icon-phone-squared"></i>
                                         <div><?php echo form_error('phone')?></div>
 				</div>
 				<div class="form-group">
@@ -54,6 +54,12 @@
 					<input class="form-control" type="text" name="email" value="<?php echo set_value('email')?>">
 					<i class="icon_mail_alt"></i>
                                         <div><?php echo form_error('email')?></div>
+				</div>
+                                <div class="form-group">
+					<label>Địa Chỉ:</label>
+					<input class="form-control" type="text" name="address" value="<?php echo set_value('address')?>">
+					<i class="icon-address-book-alt"></i>
+                                        <div><?php echo form_error('diachi')?></div>
 				</div>
                                 
 				<div class="form-group">

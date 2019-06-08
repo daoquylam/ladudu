@@ -1,9 +1,15 @@
-<?php
-Class Cart extends MY_Controller
-{
+<?php 
+class Cart extends MY_Controller{
     function __construct()
     {
         parent::__construct();
+        $this->load->model('sanpham_model');
+        $this->load->model('user_model');
+        $this->load->model('donhang_model');
+        $this->load->model('chitietdonhang_model');
+        $this->load->library('form_validation');
+        $this->load->helper('form');
+        
         
     }
     
@@ -13,32 +19,32 @@ Class Cart extends MY_Controller
     function add()
     {
         //lay ra san pham muon them vao gio hang
-        $this->load->model('product_model');
+        $this->load->model('sanpham_model');
         $id = $this->uri->rsegment(3);
-        $product = $this->product_model->get_info($id);
+        $product = $this->sanpham_model->get_info($id);
         if(!$product)
         {
-            redirect();
+//            redirect();
+            echo 'lỗi';
         }
         //tong so san pham
-        $qty = 1;
-        $price = $product->price;
-        if($product->discount > 0)
-        {
-            $price = $product->price - $product->discount;
-        }
+        $qty = $_POST['qtyInput'];
+        $price = $product->Gia;
+        
         
         //thong tin them vao gio hang
         $data = array();
-        $data['id'] = $product->id;
+        $data['id'] = $product->ID;
         $data['qty'] = $qty;// so luong
-        $data['name'] = url_title($product->name);
-        $data['image_link']  = $product->image_link;
+        $data['name'] = url_title($product->TenSanPham);
+        $data['image_link']  = $product->Imagee;
         $data['price'] = $price;
         $this->cart->insert($data);
         
         //chuyen sang trang danh sach san pham trong gio hang
-        redirect(base_url('cart'));
+        redirect(base_url('/Cart'));
+        //$this->data['temp'] = 'site/cart/cart';
+        //$this->load->view('site/layout', $this->data);
     }
     
     /*
@@ -47,14 +53,14 @@ Class Cart extends MY_Controller
     function index()
     {
         //thong gio hang
-        $carts = $this->cart->contents();
-        //tong so san pham co trong gio hang
-        $total_items = $this->cart->total_items();
+//        $carts = $this->cart->contents();
+//        //tong so san pham co trong gio hang
+//        $total_items = $this->cart->total_items();
+//        
+//        $this->data['carts'] = $carts;
+//        $this->data['total_items']  =$total_items;
         
-        $this->data['carts'] = $carts;
-        $this->data['total_items']  =$total_items;
-        
-        $this->data['temp']  ='site/cart/index';
+        $this->data['temp'] = 'site/cart/cart';
         $this->load->view('site/layout', $this->data);
     }
     
@@ -78,6 +84,83 @@ Class Cart extends MY_Controller
         //chuyen sang trang danh sach san pham trong gio hang
         redirect(base_url('cart'));
     }
+    function checkout()
+    {
+        $this->data['temp'] = 'site/cart/checkout';
+        $this->load->view('site/layout', $this->data);
+        
+    }
+    
+    function payment()
+    {
+            
+            //$this->load->model(donhang_model);
+            $input = array();
+            $input['order'] = array('ID','DESC');
+            $input['limit'] = array('0' ,'1');
+            $list = $this->donhang_model->get_list($input);
+//          print_r($list);
+            $maxid = $list[0]->ID;
+            $idhd = $maxid + 1;
+            
+            
+            if($this->cart->total_items() >= 1){
+//                echo 'thêm sản phẩm vào đi má';
+                
+                if($this->input->post())
+                {
+//                    $this->form_validation->set_rules('HoTen', 'Tên', 'required');
+//                    $this->form_validation->set_rules('email', 'Email', 'valid_email');
+//                    $this->form_validation->set_rules('sodienthoai', 'Mật khẩu', 'required');
+//                    $this->form_validation->set_rules('diachi', 'Mật khẩu nhập lại', 'required');
+//  
+//                    if($this->form_validation->run())
+//                    {
+                //them vao csdl
+                        $dataDH = array(
+                            
+                            'ID' => $idhd,
+                            'IDUser' => $_SESSION['user_id_login'],
+                            'HoTen'     => $this->input->post('ten'),
+                            'Email'    => $this->input->post('email'),
+                            'SoDienThoai'    => $this->input->post('sodienthoai'),
+                            'DiaChi'  => $this->input->post('diachi'),
+                            'TongTien' => $this->cart->total()
+                    
+                        );
+                        $dataCTHD =array();
+                        $cart = $this->cart->contents();
+                        foreach ($cart as $row){
+                            $CTDH = array(
+                                'IDDonHang' => intval($idhd),
+                                'IDSanPham' => intval($row['id']),
+                                'SoLuong' => intval($row['qty']),
+                                'Gia' => intval($row['price'])
+                            );
+                            array_push($dataCTHD,$CTDH);
+                        }
+                    if($this->donhang_model->create($dataDH))
+                    {
+                        foreach ($dataCTHD as $row){
+                            $this->chitietdonhang_model->create($row);
+                        }
+                        echo'ok';
+                        $this->cart->destroy();
+                    }else{
+                    echo 'lỗi';
+//                    $this->session->set_flashdata('message', 'Không thêm được');
+                    }
+                //chuyen tới trang danh sách quản trị viên
+//                    redirect(site_url(login));
+                    //}
+            
+            
+                }
+            }  else {
+                echo 'giỏ chưa có sản phẩm';
+            }
+        
+    }
     
     /*
      * Xoa sản phẩm trong gio hang
@@ -91,16 +174,19 @@ Class Cart extends MY_Controller
         {
             //thong gio hang
             $carts = $this->cart->contents();
-            foreach ($carts as $key => $row)
+            foreach ($carts as $row)
             {
                 if($row['id'] == $id)
                 {
                     //tong so luong san pham
-                    $data = array();
-                    $data['rowid'] = $key;
-                    $data['qty'] = 0;
-                    $this->cart->update($data);
+//                    $data = array();
+//                    $data['rowid'] = $key;
+                    $row['qty'] = 0;
+                    $delOne = array("rowid" => $row['rowid'], "qty" => $row['qty']);
+       
+                    
                 }
+                $this->cart->update($delOne);
             }
         }else{
             //xóa toàn bô giỏ hang

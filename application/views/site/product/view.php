@@ -37,6 +37,7 @@
 					<!-- /col -->
 					
 					<aside class="col-lg-4" id="sidebar">
+                                            <form method="POST" action="<?php echo base_url('Cart/add/'.$product->ID) ?>">
 						<div class="box_detail booking">
 							<div class="price">
 								<div class="score"><span>Giá đã giảm</span><strong>70%</strong></div>
@@ -53,15 +54,13 @@
 								</div>
 							</div>
                                                         
-							<a href="cart-1.html" class="btn_1 full-width purchase">Mua Ngay</a>
+<!--							<a href="cart-1.html" class="btn_1 full-width purchase">Mua Ngay</a>-->
+                                                        <input class="btn_1 full-width purchase" type="submit" value="Thêm vào giỏ hàng">
+                                                        <a href="cart-1.html" class="btn_1 full-width success">Thanh Toán</a>
 							<a href="#" class="btn_1 full-width outline wishlist"><i class="icon-call"></i> Gọi 098765431 để được tư vấn</a>
 							
 						</div>
-						<ul class="share-buttons">
-							<li><a class="fb-share" href="#0"><i class="social_facebook"></i> Share</a></li>
-							<li><a class="twitter-share" href="#0"><i class="social_twitter"></i> Tweet</a></li>
-							<li><a class="gplus-share" href="#0"><i class="social_googleplus"></i> Share</a></li>
-						</ul>
+                                            </form>
 					</aside>
 				</div>
 				<!-- /row -->

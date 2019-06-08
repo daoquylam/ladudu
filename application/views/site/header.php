@@ -7,7 +7,11 @@
 			</a>
 		</div>
 		<ul id="top_menu">
-			<li><a href="" class="cart-menu-btn" title="Cart"><strong>1</strong></a></li>
+                    <?php if($this->cart->total()){ ?>
+                    <li><a href="<?php echo base_url('cart') ?>" class="cart-menu-btn" title="Cart"><strong><?php echo $this->cart->total_items() ?></strong></a></li>
+                    <?php } else{ ?>
+                        <li><a href="" class="cart-menu-btn" title="Cart"></a></li>
+                    <?php } ?>
                         <?php if(isset($_SESSION['user_id_login'])){ ?>
                                
                                 <li>
@@ -37,7 +41,7 @@
 		</a>
 		<nav id="menu" class="main-menu">
 			<ul>
-				<li><span><a href="index.php">Trang chủ</a></span></li>
+				<li><span><a href="<?php echo base_url('home') ?>">Trang chủ</a></span></li>
 				<li><span><a href="<?php echo base_url('product/catalog/1') ?>">Gỗ Nguyên Liệu</a></span></li>
 				<li><span><a href="<?php echo base_url('product/catalog/2') ?>">Nội thất gỗ</a></span></li>
 				<li><span><a href="about.html">Giới thiệu</a></span></li>
