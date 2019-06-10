@@ -1,55 +1,24 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-<title>login.info</title>
-
-<meta name="robots" content="noindex, nofollow" />
-
-<link rel="shortcut icon" href="<?php echo public_url('admin')?>/images/icon.png" type="image/x-icon"/>
-<link rel="stylesheet" type="text/css" href="<?php echo public_url('admin/crown')?>/css/main.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo public_url('admin')?>/css/css.css" media="screen" />
-
-
-<script type="text/javascript">
-	var admin_url 	= '';
-	var base_url 	= '';
-	var public_url 	= '';
- </script>
-
-<script type="text/javascript" src="<?php echo public_url()?>/js/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="<?php echo public_url()?>/js/jquery/jquery-ui.min.js"></script>
-
-<script type="text/javascript" src="<?php echo public_url('admin/crown')?>/js/plugins/spinner/jquery.mousewheel.js"></script>
-
-<script type="text/javascript" src="<?php echo public_url('admin/crown')?>/js/plugins/forms/uniform.js"></script>
-<script type="text/javascript" src="<?php echo public_url('admin/crown')?>/js/plugins/forms/jquery.tagsinput.min.js"></script>
-<script type="text/javascript" src="<?php echo public_url('admin/crown')?>/js/plugins/forms/autogrowtextarea.js"></script>
-<script type="text/javascript" src="<?php echo public_url('admin/crown')?>/js/plugins/forms/jquery.maskedinput.min.js"></script>
-<script type="text/javascript" src="<?php echo public_url('admin/crown')?>/js/plugins/forms/jquery.inputlimiter.min.js"></script>
-
-<script type="text/javascript" src="<?php echo public_url('admin/crown')?>/js/plugins/tables/datatable.js"></script>
-<script type="text/javascript" src="<?php echo public_url('admin/crown')?>/js/plugins/tables/tablesort.min.js"></script>
-<script type="text/javascript" src="<?php echo public_url('admin/crown')?>/js/plugins/tables/resizable.min.js"></script>
-
-<script type="text/javascript" src="<?php echo public_url('admin/crown')?>/js/plugins/ui/jquery.tipsy.js"></script>
-<script type="text/javascript" src="<?php echo public_url('admin/crown')?>/js/plugins/ui/jquery.collapsible.min.js"></script>
-<script type="text/javascript" src="<?php echo public_url('admin/crown')?>/js/plugins/ui/jquery.progress.js"></script>
-<script type="text/javascript" src="<?php echo public_url('admin/crown')?>/js/plugins/ui/jquery.timeentry.min.js"></script>
-<script type="text/javascript" src="<?php echo public_url('admin/crown')?>/js/plugins/ui/jquery.colorpicker.js"></script>
-<script type="text/javascript" src="<?php echo public_url('admin/crown')?>/js/plugins/ui/jquery.jgrowl.js"></script>
-<script type="text/javascript" src="<?php echo public_url('admin/crown')?>/js/plugins/ui/jquery.breadcrumbs.js"></script>
-<script type="text/javascript" src="<?php echo public_url('admin/crown')?>/js/plugins/ui/jquery.sourcerer.js"></script>
-
-<script type="text/javascript" src="<?php echo public_url('admin/crown')?>/js/custom.js"></script>
-
-
-<script type="text/javascript" src="<?php echo public_url()?>/js/ckeditor/ckeditor.js"></script> 
-<script type="text/javascript" src="<?php echo public_url()?>/js/jquery/chosen/chosen.jquery.min.js"></script>
-<script type="text/javascript" src="<?php echo public_url()?>/js/jquery/scrollTo/jquery.scrollTo.js"></script>
-<script type="text/javascript" src="<?php echo public_url()?>/js/jquery/number/jquery.number.min.js"></script>
-<script type="text/javascript" src="<?php echo public_url()?>/js/jquery/formatCurrency/jquery.formatCurrency-1.4.0.min.js"></script>
-<script type="text/javascript" src="<?php echo public_url()?>/js/jquery/zclip/jquery.zclip.js"></script>
-
-<script type="text/javascript" src="<?php echo public_url()?>/js/jquery/colorbox/jquery.colorbox.js"></script>
-<link rel="stylesheet" type="text/css" href="<?php echo public_url()?>/js/jquery/colorbox/colorbox.css" media="screen" />
-
-<script type="text/javascript" src="<?php echo public_url()?>/js/custom_admin.js" type="text/javascript"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Ansonika">
+  <title>PANAGEA - Admin dashboard</title>
+	
+  <!-- Favicons-->
+  <link rel="shortcut icon" href="<?php echo public_url('admin');?>/img/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" type="image/x-icon" href="<?php echo public_url('admin');?>/img/apple-touch-icon-57x57-precomposed.png">
+  <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="<?php echo public_url('admin');?>/img/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="<?php echo public_url('admin');?>/img/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="<?php echo public_url('admin');?>/img/apple-touch-icon-144x144-precomposed.png">
+	
+  <!-- Bootstrap core CSS-->
+  <link href="<?php echo public_url('admin');?>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Main styles -->
+  <link href="<?php echo public_url('admin');?>/css/admin.css" rel="stylesheet">
+  <!-- Icon fonts-->
+  <link href="<?php echo public_url('admin');?>/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Plugin styles -->
+  <link href="<?php echo public_url('admin');?>/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <!-- Your custom styles -->
+  <link href="<?php echo public_url('admin');?>/css/custom.css" rel="stylesheet">
