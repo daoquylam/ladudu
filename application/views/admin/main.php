@@ -3,7 +3,7 @@
     <?php $this->load->view('admin/head');?>
     </head>
     
-    <body>
+    <body class="fixed-nav sticky-footer" id="page-top">
 
 
          <?php $this->load->view('admin/header');?>

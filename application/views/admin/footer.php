@@ -25,3 +25,4 @@
     <script src="<?php echo public_url('admin');?>/js/admin.js"></script>
 	<!-- Custom scripts for this page-->
     <script src="<?php echo public_url('admin');?>/js/admin-charts.js"></script>
+    <script src="<?php echo public_url('admin');?>/js/admin-datatables.js"></script>

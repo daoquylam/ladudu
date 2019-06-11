@@ -17,11 +17,19 @@
             <span class="nav-link-text">Đơn Hàng</span>
           </a>
         </li>
-    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Reviews">
-        <a class="nav-link" href="<?php echo admin_url('themsanpham') ?>">
-            <i class="fa fa-fw fa-star"></i>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My listings">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMylistings" data-parent="#mylistings">
+            <i class="fa fa-fw fa-list"></i>
             <span class="nav-link-text">Sản Phẩm</span>
           </a>
+          <ul class="sidenav-second-level collapse" id="collapseMylistings">
+            <li>
+              <a href="<?php echo admin_url('themsanpham') ?>">Thêm sản phẩm </a>
+            </li>
+            <li>
+              <a href="#">Danh sách sản phẩm </a>
+            </li>
+          </ul>
         </li>
     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Bookmarks">
           <a class="nav-link" href="bookmarks.html">
