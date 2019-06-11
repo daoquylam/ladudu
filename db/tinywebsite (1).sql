@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 11, 2019 at 08:54 PM
+-- Generation Time: Jun 11, 2019 at 03:54 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.1.28
 
@@ -48,15 +48,7 @@ INSERT INTO `chitietdonhang` (`ID`, `IDDonHang`, `IDSanPham`, `SoLuong`, `Gia`) 
 (5, 14, 4, 1, 1000),
 (6, 15, 1, 3, 1000),
 (7, 15, 7, 1, 1000),
-(8, 15, 4, 1, 1000),
-(9, 16, 9, 1, 1000),
-(10, 17, 9, 1, 1000),
-(11, 18, 7, 1, 1000),
-(12, 18, 6, 3, 1000),
-(13, 19, 9, 3, 1000),
-(14, 20, 9, 3, 1000),
-(15, 21, 9, 2, 1000),
-(16, 22, 8, 3, 1000);
+(8, 15, 4, 1, 1000);
 
 -- --------------------------------------------------------
 
@@ -71,25 +63,17 @@ CREATE TABLE `donhang` (
   `Email` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `SoDienThoai` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
   `DiaChi` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `TongTien` float DEFAULT NULL,
-  `trangthai` int(1) DEFAULT '0'
+  `TongTien` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `donhang`
 --
 
-INSERT INTO `donhang` (`ID`, `IDUser`, `HoTen`, `Email`, `SoDienThoai`, `DiaChi`, `TongTien`, `trangthai`) VALUES
-(13, 14, 'aaaaaaaabbbb', 'abc234@gmail.com', '987654321', '1234abcd 56789cd', 5000, 1),
-(14, 14, 'aaaaaaaabbbb', 'abc234@gmail.com', '987654321', '1234abcd 56789cd', 5000, 1),
-(15, 14, 'aaaaaaaabbbb', 'abc234@gmail.com', '987654321', '1234abcd 56789cd', 5000, 1),
-(16, NULL, '', '', '', '', 1000, 1),
-(17, NULL, 'lam', 'abc@gmail.com', '123457', '234568wefghjk', 1000, 1),
-(18, 0, 'lam', 'abc@gmail.com', '23490', 'ảtyurlykje35645778', 4000, 1),
-(19, 0, 'lam', 'abc@gmail.com', '123467', '', 3000, 0),
-(20, 0, 'lam', 'admin@ladudu.com', '0987432', 'wertyuxbncmv,', 3000, 0),
-(21, 0, 'lam', 'admin@ladudu.com', '1237890', 'sdhfjfdgh', 2000, 0),
-(22, 0, 'em iu', 'admin@ladudu.com', '0987654321', 'qưertyui123', 3000, 1);
+INSERT INTO `donhang` (`ID`, `IDUser`, `HoTen`, `Email`, `SoDienThoai`, `DiaChi`, `TongTien`) VALUES
+(13, 14, 'aaaaaaaabbbb', 'abc234@gmail.com', '987654321', '1234abcd 56789cd', 5000),
+(14, 14, 'aaaaaaaabbbb', 'abc234@gmail.com', '987654321', '1234abcd 56789cd', 5000),
+(15, 14, 'aaaaaaaabbbb', 'abc234@gmail.com', '987654321', '1234abcd 56789cd', 5000);
 
 -- --------------------------------------------------------
 
@@ -137,7 +121,7 @@ CREATE TABLE `sanpham` (
 --
 
 INSERT INTO `sanpham` (`ID`, `IDLoaiSanPham`, `TenSanPham`, `Gia`, `GiamGia`, `MoTa`, `ChatLieu`, `MauSac`, `KichThuoc`, `XuatXu`, `Imagee`, `SoLuong`, `image`) VALUES
-(4, 2, 'Ghế Gỗ Cao Su 11111', 1000, 0, 'Đây là Gỗ Thông nguyên liệu.......', 'Gỗ tươi', 'nâu', '10x10x10', 'việt nam', '[]', NULL, ''),
+(4, 2, 'Ghế Gỗ Cao Su', 1000, 0, 'Đây là Gỗ Thông nguyên liệu.......', 'Gỗ tươi', 'nâu', '10x10x10', 'việt nam', '4.jpg', NULL, '4.jpg'),
 (5, 2, 'Gỗ Cao Su 1', 1000, 0, 'Đây là Gỗ Thông nguyên liệu.......', 'Gỗ tươi', 'nâu', '10x10x10', 'việt nam', '5.jpg', NULL, '5.jpg'),
 (6, 2, 'Gỗ Cao Su 2', 1000, 0, 'Đây là Gỗ Thông nguyên liệu.......', 'Gỗ tươi', 'nâu', '10x10x10', 'việt nam', '6.jpg', NULL, '6.jpg'),
 (7, 2, 'Gỗ Cao Su 3', 1000, 0, 'Đây là Gỗ Thông nguyên liệu.......', 'Gỗ tươi', 'nâu', '10x10x10', 'việt nam', '7.jpg', NULL, '7.jpg'),
@@ -168,6 +152,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`ID`, `HoTen`, `Email`, `Matkhau`, `SoDienThoai`, `DiaChi`) VALUES
+(1, 'daoquylam', 'abc@gmail.com', '123456', 987654321, NULL),
+(5, 'quyamaaaa', 'aabc@gmail.com', '123456', 987654321, NULL),
 (6, 'aaaaaaaa', 'agggggg@gmao.com', 'abcabc', 1234567890, NULL),
 (7, 'aaaaaaaaaa', 'quaaaa@gmail.com', 'abcabc', 1234567890, NULL),
 (8, 'adsafdad', 'qaaa@gmail.com', '123456', 987654321, NULL),
@@ -224,13 +210,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `chitietdonhang`
 --
 ALTER TABLE `chitietdonhang`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `donhang`
 --
 ALTER TABLE `donhang`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `loaisanpham`
@@ -259,6 +245,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `chitietdonhang`
   ADD CONSTRAINT `chitietdonhang_ibfk_1` FOREIGN KEY (`IDDonHang`) REFERENCES `donhang` (`ID`);
+
+--
+-- Constraints for table `donhang`
+--
+ALTER TABLE `donhang`
+  ADD CONSTRAINT `donhang_ibfk_1` FOREIGN KEY (`IDUser`) REFERENCES `users` (`ID`);
 
 --
 -- Constraints for table `sanpham`

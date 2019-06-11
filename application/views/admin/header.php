@@ -40,7 +40,7 @@
           </ul>
         </li>
     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Bookmarks">
-          <a class="nav-link" href="bookmarks.html">
+          <a class="nav-link" href="<?php echo admin_url('danhsachuser') ?>">
             <i class="fa fa-fw fa-heart"></i>
             <span class="nav-link-text">Khách Hàng</span>
           </a>
