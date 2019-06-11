@@ -49,7 +49,7 @@ class adminlogin extends MY_Controller{
         $email = $this->input->post('email');
         $password = $this->input->post('password');
         
-        if(($email == 'admin@ladudu.com') and ($password == '123456'))
+        if(($email == 'dungxinhdep') and ($password == 'loveyou'))
         {
             return true;
         }
