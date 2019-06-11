@@ -34,7 +34,7 @@
                         <th><?php echo $row->SoDienThoai ?></th>
                         <th><?php echo $row->DiaChi ?></th>
                         <th><?php echo $row->TongTien ?></th>
-                        <th><a href="<?php echo base_url('/admin/danhsachsanpham/xoa/'.$row->ID)?>">Chi Tiết</a></th>
+                        <th><a href="<?php echo base_url('/admin/chitietdonhang/duyetchitiet/'.$row->ID)?>">Chi Tiết</a></th>
                         <th><a href="<?php echo base_url('/admin/danhsachdonhang/duyet/'.$row->ID)?>">Duyệt Đơn Hàng</a></th>
                     </tr> 
                   <?php } ?>
