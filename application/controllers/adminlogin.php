@@ -59,4 +59,8 @@ class adminlogin extends MY_Controller{
         return false;
         }
     }
+    function logout(){
+        $this->session->unset_userdata('admin_id_login');
+        redirect(site_url(),'refresh');
+    }
 }

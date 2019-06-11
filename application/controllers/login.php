@@ -119,4 +119,9 @@ class login extends MY_Controller{
         $user = $this->user_model->get_info_rule($where);
         return $user;
     }
+    
+    function logout(){
+        $this->session->unset_userdata('user_id_login');
+        redirect(site_url(),'refresh');
+    }
 }

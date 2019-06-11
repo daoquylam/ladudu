@@ -6,7 +6,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="index.html">
+          <a class="nav-link" href="<?php echo admin_url('home') ?>">
             <i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">Dashboard</span>
           </a>
@@ -18,7 +18,7 @@
           </a>
         </li>
     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Reviews">
-          <a class="nav-link" href="reviews.html">
+        <a class="nav-link" href="<?php echo admin_url('themsanpham') ?>">
             <i class="fa fa-fw fa-star"></i>
             <span class="nav-link-text">Sản Phẩm</span>
           </a>
@@ -40,8 +40,9 @@
       <ul class="navbar-nav ml-auto">
 
         <li class="nav-item">
-          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+            <a class="nav-link" href="<?php echo base_url('adminlogin/logout'); ?>">
             <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+
         </li>
       </ul>
     </div>

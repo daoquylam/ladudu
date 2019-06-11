@@ -5,9 +5,13 @@
 					<h1 class="fadeInUp"><span></span><?php echo $product->TenSanPham?></h1>
 				</div>
 				<span class="magnific-gallery">
-					<a href="img/gallery/tour_list_1.jpg" class="btn_photos" title="Photo title" data-effect="mfp-zoom-in">Xem Hình Ảnh</a>
-					<a href="img/gallery/tour_list_2.jpg" title="Photo title" data-effect="mfp-zoom-in"></a>
-					<a href="img/gallery/tour_list_3.jpg" title="Photo title" data-effect="mfp-zoom-in"></a>
+                                    <a href="<?php echo base_url('upload/product/'.$product->image)?>" class="btn_photos" title="Photo title" data-effect="mfp-zoom-in">Xem Hình Ảnh</a>
+                                    <?php if(is_array($image_list)):?>
+					<?php foreach ($image_list as $img):?>
+				           <a href="<?php echo base_url('upload/product/'.$img)?>" title="Photo title" data-effect="mfp-zoom-in"></a>
+                                        <?php endforeach;?>
+				    <?php endif;?>
+
 				</span>
 			</div>
 		</section>

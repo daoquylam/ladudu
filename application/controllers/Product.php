@@ -97,6 +97,8 @@ Class Product extends MY_Controller
         $product = $this->sanpham_model->get_info($id);
         if(!$product) redirect();
         $this->data['product'] = $product;
+        $image_list = @json_decode($product->Imagee);
+        $this->data['image_list'] = $image_list;
         
         //lấy danh sách ảnh sản phẩm kèm theo
 //        $image_list = @json_decode($product->image_list);

@@ -43,7 +43,7 @@
                                 <div class="item">
 					<div class="box_grid">
 						<figure>
-                                                    <a href="<?php echo base_url('/product/view/'.$row->ID) ?>"><img src="<?php echo base_url('upload/product/'.$row->Imagee)?>" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Xem thêm</span></div></a>
+                                                    <a href="<?php echo base_url('/product/view/'.$row->ID) ?>"><img src="<?php echo base_url('upload/product/'.$row->image)?>" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Xem thêm</span></div></a>
 						</figure>
 						<div class="wrapper">
 							<h3><a href="<?php echo base_url('/product/view/'.$row->ID) ?>"><?php echo $row->TenSanPham?></a></h3>
