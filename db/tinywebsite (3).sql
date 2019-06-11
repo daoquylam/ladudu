@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 10, 2019 at 03:34 PM
+-- Generation Time: Jun 11, 2019 at 03:54 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.1.28
 
@@ -112,23 +112,25 @@ CREATE TABLE `sanpham` (
   `KichThuoc` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `XuatXu` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `Imagee` text COLLATE utf8_unicode_ci,
-  `SoLuong` int(11) DEFAULT NULL
+  `SoLuong` int(11) DEFAULT NULL,
+  `image` text COLLATE utf8_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `sanpham`
 --
 
-INSERT INTO `sanpham` (`ID`, `IDLoaiSanPham`, `TenSanPham`, `Gia`, `GiamGia`, `MoTa`, `ChatLieu`, `MauSac`, `KichThuoc`, `XuatXu`, `Imagee`, `SoLuong`) VALUES
-(1, 1, 'Gỗ Thông', 1000, 0, 'Đây là Gỗ Thông nguyên liệu.......', 'Gỗ tươi', 'nâu', '10x10x10', 'việt nam', '1.jpg', NULL),
-(2, 2, 'Gỗ Cao Su', 1000, 0, 'Đây là Gỗ Thông nguyên liệu.......', 'Gỗ tươi', 'nâu', '10x10x10', 'việt nam', '2.jpg', NULL),
-(3, 1, 'Bàn ăn lớn', 1000, 0, 'Đây là bàn ăn nguyên liệu gỗ aaa.......', 'Gỗ tươi', 'nâu', '10x10x10', 'việt nam', '3.jpg', NULL),
-(4, 2, 'Ghế Gỗ Cao Su', 1000, 0, 'Đây là Gỗ Thông nguyên liệu.......', 'Gỗ tươi', 'nâu', '10x10x10', 'việt nam', '4.jpg', NULL),
-(5, 2, 'Gỗ Cao Su 1', 1000, 0, 'Đây là Gỗ Thông nguyên liệu.......', 'Gỗ tươi', 'nâu', '10x10x10', 'việt nam', '5.jpg', NULL),
-(6, 2, 'Gỗ Cao Su 2', 1000, 0, 'Đây là Gỗ Thông nguyên liệu.......', 'Gỗ tươi', 'nâu', '10x10x10', 'việt nam', '6.jpg', NULL),
-(7, 2, 'Gỗ Cao Su 3', 1000, 0, 'Đây là Gỗ Thông nguyên liệu.......', 'Gỗ tươi', 'nâu', '10x10x10', 'việt nam', '7.jpg', NULL),
-(8, 2, 'Gỗ Cao Su 4', 1000, 0, 'Đây là Gỗ Thông nguyên liệu.......', 'Gỗ tươi', 'nâu', '10x10x10', 'việt nam', '8.jpg', NULL),
-(9, 2, 'Gỗ Cao Su 5', 1000, 0, 'Đây là Gỗ Thông nguyên liệu.......', 'Gỗ tươi', 'nâu', '10x10x10', 'việt nam', '9.jpg', NULL);
+INSERT INTO `sanpham` (`ID`, `IDLoaiSanPham`, `TenSanPham`, `Gia`, `GiamGia`, `MoTa`, `ChatLieu`, `MauSac`, `KichThuoc`, `XuatXu`, `Imagee`, `SoLuong`, `image`) VALUES
+(4, 2, 'Ghế Gỗ Cao Su', 1000, 0, 'Đây là Gỗ Thông nguyên liệu.......', 'Gỗ tươi', 'nâu', '10x10x10', 'việt nam', '4.jpg', NULL, '4.jpg'),
+(5, 2, 'Gỗ Cao Su 1', 1000, 0, 'Đây là Gỗ Thông nguyên liệu.......', 'Gỗ tươi', 'nâu', '10x10x10', 'việt nam', '5.jpg', NULL, '5.jpg'),
+(6, 2, 'Gỗ Cao Su 2', 1000, 0, 'Đây là Gỗ Thông nguyên liệu.......', 'Gỗ tươi', 'nâu', '10x10x10', 'việt nam', '6.jpg', NULL, '6.jpg'),
+(7, 2, 'Gỗ Cao Su 3', 1000, 0, 'Đây là Gỗ Thông nguyên liệu.......', 'Gỗ tươi', 'nâu', '10x10x10', 'việt nam', '7.jpg', NULL, '7.jpg'),
+(8, 2, 'Gỗ Cao Su 4', 1000, 0, 'Đây là Gỗ Thông nguyên liệu.......', 'Gỗ tươi', 'nâu', '10x10x10', 'việt nam', '8.jpg', NULL, '8.jpg'),
+(9, 2, 'Gỗ Cao Su 5', 1000, 0, 'Đây là Gỗ Thông nguyên liệu.......', 'Gỗ tươi', 'nâu', '10x10x10', 'việt nam', '9.jpg', NULL, '9.jpg'),
+(10, 1, 'ghgk', 12345322, 123, '124562qeghw', '12345', '2345y', '2454ygs', '2tre', NULL, NULL, '10.jpg'),
+(12, 1, 'aaaaaaa', 1000, 10, 'qưertyuyreej', 'ưeryuiytrtu', 'ưertyuitre', 'ưertyuifgh', 'ưertyuireh', '[\"Chi_ti\\u1ebft_duy\\u1ec7t_\\u0111\\u01a1n.PNG\",\"\\u0111\\u1eb7t_h\\u00e0ng.png\"]', NULL, 'Duyệt_đơn_hàng.PNG'),
+(13, 2, 'daoquylam', 1234, 123456, '2345788765asdfghgf', 'ưerkjhgfdfgh', 'hjkfdjk', 'ưertyuirhj', 'rjkhj', '[]', NULL, ''),
+(14, 2, 'cccccccc', 1234, 123456, '2345788765asdfghgf', 'ưerkjhgfdfgh', 'hjkfdjk', 'ưertyuirhj', 'rjkhj', '[]', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -226,7 +228,7 @@ ALTER TABLE `loaisanpham`
 -- AUTO_INCREMENT for table `sanpham`
 --
 ALTER TABLE `sanpham`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -242,8 +244,7 @@ ALTER TABLE `users`
 -- Constraints for table `chitietdonhang`
 --
 ALTER TABLE `chitietdonhang`
-  ADD CONSTRAINT `chitietdonhang_ibfk_1` FOREIGN KEY (`IDDonHang`) REFERENCES `donhang` (`ID`),
-  ADD CONSTRAINT `chitietdonhang_ibfk_2` FOREIGN KEY (`IDSanPham`) REFERENCES `sanpham` (`ID`);
+  ADD CONSTRAINT `chitietdonhang_ibfk_1` FOREIGN KEY (`IDDonHang`) REFERENCES `donhang` (`ID`);
 
 --
 -- Constraints for table `donhang`
