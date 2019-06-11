@@ -85,62 +85,62 @@
 					<div class="col-lg-6">
 						<a class="box_news" href="#0">
 							<figure><img src="<?php echo public_url();?>/site/img/news_home_1.jpg" alt="">
-								<figcaption><strong>28</strong>Dec</figcaption>
 							</figure>
 							<ul>
-								<li>Mark Twain</li>
-								<li>20.11.2017</li>
+								<li>Cù Dung</li>
+								<li>16/10/2019</li>
 							</ul>
-							<h4>Pri oportere scribentur eu</h4>
-							<p>Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
+							<p>Sản phẩm được thiết kế và thi công giống như yêu cầu của tôi.
+
+Nhân viên giao hàng nhiệt tình, tiến độ thi công và lắp ráp đúng theo quy định.
+
+Xem thêm sản phẩm công trình tại đây! </p>
 						</a>
 					</div>
 					<!-- /box_news -->
 					<div class="col-lg-6">
 						<a class="box_news" href="#0">
 							<figure><img src="<?php echo public_url();?>/site/img/news_home_2.jpg" alt="">
-								<figcaption><strong>28</strong>Dec</figcaption>
 							</figure>
 							<ul>
-								<li>Jhon Doe</li>
-								<li>20.11.2017</li>
+								<li>Viết Anh</li>
+								<li>10.10.2019</li>
 							</ul>
-							<h4>Duo eius postea suscipit ad</h4>
-							<p>Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
+							<p>Thiết kế và sản xuất đúng như bản vẽ. Sản phẩm sắc nét, thi công nhanh chóng và hiệu quả. Chúc cho công ty không ngừng phát triển để mang đến những nội thất sang trọng cho các gia đình khác nhé!</p>
 						</a>
 					</div>
 					<!-- /box_news -->
 					<div class="col-lg-6">
 						<a class="box_news" href="#0">
 							<figure><img src="<?php echo public_url();?>/site/img/news_home_3.jpg" alt="">
-								<figcaption><strong>28</strong>Dec</figcaption>
 							</figure>
 							<ul>
-								<li>Luca Robinson</li>
-								<li>20.11.2017</li>
+								<li>Anh Viết</li>
+								<li>01.10.2019</li>
 							</ul>
-							<h4>Elitr mandamus cu has</h4>
-							<p>Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
+							<p>Dịch vụ bảo hành của công ty thực sự rất tốt, khi mua đồ nội thất của công ty Hoàng Gia về sử dụng, nếu như sản phẩm không may bị lỗi hay hỏng hóc chi cần gọi điện đến số chăm sóc khách hàng, ngay hôm sau sẽ có nhân viên đến bảo hành bao trì dịch vụ, không như những chỗ khác gọi mỏi mồn cũng chả thấy đâu.
+
+</p>
 						</a>
 					</div>
 					<!-- /box_news -->
 					<div class="col-lg-6">
 						<a class="box_news" href="#0">
 							<figure><img src="<?php echo public_url();?>/site/img/news_home_4.jpg" alt="">
-								<figcaption><strong>28</strong>Dec</figcaption>
+								
 							</figure>
 							<ul>
-								<li>Paula Rodrigez</li>
-								<li>20.11.2017</li>
+								<li>Huỳnh Huân </li>
+								<li>22/10/2019</li>
 							</ul>
-							<h4>Id est adhuc ignota delenit</h4>
-							<p>Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
+							<p>Sản phẩm được thiết kế và thi công giống như yêu cầu của tôi.
+
+Nhân viên giao hàng nhiệt tình, tiến độ thi công và lắp ráp đúng theo quy định.
+
+Xem thêm sản phẩm công trình tại đây!</p>
 						</a>
 					</div>
 					<!-- /box_news -->
-				</div>
-				<!-- /row -->
-				<p class="btn_home_align"><a href="blog.html" class="btn_1 rounded">Xem thêm</a></p>
-			</div>
+				
 			<!-- /container -->
 		</div>
