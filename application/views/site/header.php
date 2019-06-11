@@ -1,7 +1,7 @@
         <header class="header menu_fixed">
 		<!-- <div id="preloader"><div data-loader="circle-side"></div></div> --><!-- /Preload -->
 		<div id="logo">
-			<a href="index.php">
+			<a href="#">
                             <img src="<?php echo public_url();?>/site/img/logo.png" width="150" height="36" data-retina="true" alt="" class="logo_normal">
 				<img src="<?php echo public_url();?>/site/img/logo_sticky.png" width="150" height="36" data-retina="true" alt="" class="logo_sticky">
 			</a>

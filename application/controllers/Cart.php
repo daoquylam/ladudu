@@ -109,18 +109,23 @@ class Cart extends MY_Controller{
                 
                 if($this->input->post())
                 {
-//                    $this->form_validation->set_rules('HoTen', 'Tên', 'required');
-//                    $this->form_validation->set_rules('email', 'Email', 'valid_email');
-//                    $this->form_validation->set_rules('sodienthoai', 'Mật khẩu', 'required');
-//                    $this->form_validation->set_rules('diachi', 'Mật khẩu nhập lại', 'required');
-//  
-//                    if($this->form_validation->run())
-//                    {
-                //them vao csdl
+                    $this->form_validation->set_rules('ten', 'Tên', 'required');
+                    $this->form_validation->set_rules('email', 'Email', 'valid_email');
+                    $this->form_validation->set_rules('sodienthoai', 'Số điện thoại', 'required|numeric');
+                    $this->form_validation->set_rules('diachi', 'Địa chỉ', 'required');
+  
+                    if($this->form_validation->run())
+                    {
+                       if(isset($_SESSION['user_id_login'])){
+                            $idUser = $_SESSION['user_id_login'];
+                        }
+                        else{
+                            $idUser = 0;
+                        }
                         $dataDH = array(
                             
                             'ID' => $idhd,
-                            'IDUser' => $_SESSION['user_id_login'],
+                            'IDUser' => $idUser,
                             'HoTen'     => $this->input->post('ten'),
                             'Email'    => $this->input->post('email'),
                             'SoDienThoai'    => $this->input->post('sodienthoai'),
@@ -139,27 +144,32 @@ class Cart extends MY_Controller{
                             );
                             array_push($dataCTHD,$CTDH);
                         }
-                    if($this->donhang_model->create($dataDH))
-                    {
-                        foreach ($dataCTHD as $row){
-                            $this->chitietdonhang_model->create($row);
-                        }
-                        echo'ok';
+                        if($this->donhang_model->create($dataDH))
+                        {
+                            foreach ($dataCTHD as $row){
+                                $this->chitietdonhang_model->create($row);
+                            }
                         $this->cart->destroy();
-                    }else{
-                    echo 'lỗi';
-//                    $this->session->set_flashdata('message', 'Không thêm được');
+                        $this->data['email'] = $this->input->post('email');
+                        $this->data['temp'] = 'site/cart/finish';
+                        $this->load->view('site/layout', $this->data);
+                        
+                        }else
+                        {
+                            echo 'lỗi';
+                        }
                     }
-                //chuyen tới trang danh sách quản trị viên
-//                    redirect(site_url(login));
-                    //}
-            
-            
+                    else{
+                        
+                       $this->data['temp'] = 'site/cart/checkout';
+                       $this->load->view('site/layout', $this->data); 
+                    }
                 }
-            }  else {
+            }
+            else
+            {
                 echo 'giỏ chưa có sản phẩm';
             }
-        
     }
     
     /*

@@ -9,31 +9,32 @@
 		<!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Bảng danh sách sản phẩm</div>
+          <i class="fa fa-table"></i> Bảng danh sách đơn hàng đã duyệt</div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  <th>Mã SP</th>
-                  <th>Mã Loại</th>
-                  <th>Tên sản phẩm</th>
-                  <th>Giá </th>
-                  <th>Chất liệu</th>
-                  <th>Sửa sản phẩm</th>
-                  <th>Xóa sản phẩm</th>
+                  <th>ID Đơn Hàng</th>
+                  <th>Họ Tên</th>
+                  <th>Email</th>
+                  <th>Số Điện Thoại </th>
+                  <th>Địa Chỉ</th>
+                  <th>Tổng Tiền</th>
+                  <th>Chi Tiết</th>
                 </tr>
               </thead>
               <tbody>
                   <?php foreach ($list as $row) { ?>
                      <tr>
                         <th><?php echo $row->ID ?></th>
-                        <th><?php echo $row->IDLoaiSanPham ?></th>
-                        <th><?php echo $row->TenSanPham ?></th>
-                        <th><?php echo $row->Gia ?></th>
-                        <th><?php echo $row->ChatLieu ?></th>
-                        <th><a href="<?php echo base_url('/admin/danhsachsanpham/suasanpham/'.$row->ID)?>">Chỉnh sửa</a></th>
-                        <th><a href="<?php echo base_url('/admin/danhsachsanpham/xoa/'.$row->ID)?>">Xóa sản Phẩm</a></th>
+                        <th><?php echo $row->HoTen ?></th>
+                        <th><?php echo $row->Email ?></th>
+                        <th><?php echo $row->SoDienThoai ?></th>
+                        <th><?php echo $row->DiaChi ?></th>
+                        <th><?php echo $row->TongTien ?></th>
+                        <th><a href="<?php echo base_url('/admin/danhsachsanpham/xoa/'.$row->ID)?>">Chi Tiết</a></th>
+          
                     </tr> 
                   <?php } ?>
                                 
@@ -41,7 +42,7 @@
             </table>
           </div>
         </div>
-        <div class="card-footer small text-muted">Danh sách sản phẩm đã được cập nhập</div>
+        <div class="card-footer small text-muted">Danh sách đơn hàng đã được cập nhập</div>
       </div>
 	  <!-- /tables-->
 	  </div>

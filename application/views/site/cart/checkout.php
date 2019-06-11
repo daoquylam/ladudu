@@ -56,14 +56,14 @@
                                                 <div class="col-sm-6">
                                                         <div class="form-group">
                                                                 <label>Họ Tên:</label>
-                                                                <input type="text" class="form-control" id="firstname_booking" name="ten" value="<?php echo $_SESSION['user_info']->HoTen ?>">
-<!--                                                                <div><//?php echo form_error('ten')?></div>-->
+                                                                <input type="text" class="form-control"  name="ten" value="<?php echo $_SESSION['user_info']->HoTen ?>">
+                                                                <div><?php echo form_error('ten')?></div>
                                                         </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                         <div class="form-group">
                                                                 <label>Email :</label>
-                                                                <input type="text" class="form-control" id="lastname_booking" name="email" value="<?php echo $_SESSION['user_info']->Email ?>">
+                                                                <input type="text" class="form-control"  name="email" value="<?php echo $_SESSION['user_info']->Email ?>">
                                                                 <div><?php echo form_error('email')?></div>
                                                         </div>
                                                 </div>
@@ -72,14 +72,15 @@
                                                 <div class="col-sm-6">
                                                         <div class="form-group">
                                                                 <label>Số Điện Thoại: </label>
-                                                                <input type="text" id="email_booking" name="sodienthoai" class="form-control" value="<?php echo $_SESSION['user_info']->SoDienThoai ?>">
+                                                                <input type="text" name="sodienthoai" class="form-control" value="<?php echo $_SESSION['user_info']->SoDienThoai ?>">
+<!--                                                                <input type="text" name="sodienthoai" class="form-control" value="<//?php echo $_SESSION['user_info']->SoDienThoai ?>">-->
                                                                 <div><?php echo form_error('sodienthoai')?></div>
                                                         </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                         <div class="form-group">
                                                                 <label>Địa Chỉl</label>
-                                                                <input type="text" id="email_booking_2" name="diachi" class="form-control" value="<?php echo $_SESSION['user_info']->DiaChi ?>">
+                                                                <input type="text"  name="diachi" class="form-control" value="<?php echo $_SESSION['user_info']->DiaChi ?>">
                                                                 <div><?php echo form_error('diachi')?></div>
                                                         </div>
                                                 </div>
@@ -109,13 +110,13 @@
                                                 <div class="col-sm-6">
                                                         <div class="form-group">
                                                                 <label>Họ Tên:</label>
-                                                                <input type="text" class="form-control" id="firstname_booking" name="ten">
+                                                                <input type="text" class="form-control" name="ten">
                                                         </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                         <div class="form-group">
                                                                 <label>Email :</label>
-                                                                <input type="text" class="form-control" id="lastname_booking" name="email">
+                                                                <input type="text" class="form-control" name="email">
                                                         </div>
                                                 </div>
                                         </div>
@@ -123,13 +124,13 @@
                                                 <div class="col-sm-6">
                                                         <div class="form-group">
                                                                 <label>Số Điện Thoại: </label>
-                                                                <input type="email" id="email_booking" name="sodienthoai" class="form-control">
+                                                                <input type="text" name="sodienthoai" class="form-control">
                                                         </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                         <div class="form-group">
                                                                 <label>Địa Chỉl</label>
-                                                                <input type="email" id="email_booking_2" name="diachi" class="form-control">
+                                                                <input type="text" name="diachi" class="form-control">
                                                         </div>
                                                 </div>
                                         </div>

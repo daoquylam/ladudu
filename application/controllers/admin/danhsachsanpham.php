@@ -102,7 +102,7 @@ class danhsachsanpham extends MY_Controller
                     $idsanpham = $_POST['ID'];
                      if($this->sanpham_model->update($idsanpham, $data))
                         {
-                         echo 'Thành công';
+                         redirect(base_url('admin/danhsachsanpham'));
 //                        $this->data['message'] = 'Lưu sản phẩm thành công';
                         }
                     else {

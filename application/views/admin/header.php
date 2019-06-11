@@ -11,11 +11,19 @@
             <span class="nav-link-text">Dashboard</span>
           </a>
         </li>
-    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Add listing">
-          <a class="nav-link" href="add-listing.html">
-            <i class="fa fa-fw fa-plus-circle"></i>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#Components">
+            <i class="fa fa-fw fa-list"></i>
             <span class="nav-link-text">Đơn Hàng</span>
           </a>
+          <ul class="sidenav-second-level collapse" id="collapseComponents">
+            <li>
+              <a href="<?php echo admin_url('danhsachdonhang') ?>">Duyệt Đơn Hàng</a>
+            </li>
+			<li>
+              <a href="<?php echo admin_url('donhangdaduyet') ?>">Đơn đã duyệt</a>
+            </li>
+          </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My listings">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMylistings" data-parent="#mylistings">
