@@ -27,7 +27,7 @@
               <a href="<?php echo admin_url('themsanpham') ?>">Thêm sản phẩm </a>
             </li>
             <li>
-              <a href="#">Danh sách sản phẩm </a>
+              <a href="<?php echo admin_url('danhsachsanpham') ?>">Danh sách sản phẩm </a>
             </li>
           </ul>
         </li>

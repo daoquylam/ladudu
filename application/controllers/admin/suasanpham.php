@@ -7,11 +7,11 @@
  */
 
 /**
- * Description of danhsachsanpham
+ * Description of suasanpham
  *
  * @author QuyNam
  */
-class danhsachsanpham extends MY_Controller
+class suasanpham extends MY_Controller
 {
         function __construct()
         {
@@ -22,41 +22,16 @@ class danhsachsanpham extends MY_Controller
         }
 	function index()
 	{
-            
-            $input = array();
-//            $input['where'] = array('IDLoaiSanPham' => $id);
-            $list = $this->sanpham_model->get_list($input);
-            $this->data['list'] = $list;
-//            print_r($list);
-//        foreach ($list as $row) {
-//            print_r($row);
-//            echo '<br>';
-//            
-//        }
-            $this->data['temp'] = 'admin/sanpham/danhsachsanpham';
-            $this->load->view('admin/main', $this->data);
-
-        }
-        function xoa(){
+            //$this->load->model('sanpham_model');
             $idsanpham = $this->uri->segment(4);
-            $input = array('ID' => $idsanpham);
-            if($this->sanpham_model->del_rule($input)){
-                redirect(base_url('admin/danhsachsanpham'));
-            }
-            else{
-                echo 'lỗi';
-            }
-        }
-        function suasanpham(){
-            $idsanpham = $this->uri->segment(4);   
-            $input = array('ID' => $idsanpham);
-            $list = $this->sanpham_model->get_info_rule($input, '*');
-//            print_r($list);
+            $input = array();
+            $input['where'] = array('ID' => $idsanpham);
+            $list = $this->sanpham_model->get_info($input);
             $this->data['list'] = $list;
             $this->data['temp'] = 'admin/sanpham/suasanpham';
             $this->load->view('admin/main', $this->data);
         }
-         function sua(){
+        function sua(){
             
             if($this->input->post())
             {
@@ -83,7 +58,7 @@ class danhsachsanpham extends MY_Controller
                     $image_list = $this->upload_library->upload_file($upload_path, 'image_list');
                     $image_list = json_encode($image_list);
                     //them vao csdl
-                    
+                    $idsanpham = $_POST['ID'];
                     $data = array(
                         
                         'IDLoaiSanPham'     => $_POST['loaisanpham'],
@@ -99,8 +74,7 @@ class danhsachsanpham extends MY_Controller
                         'Imagee'    => $image_list
                         
                     );
-                    $idsanpham = $_POST['ID'];
-                     if($this->sanpham_model->update($idsanpham, $data))
+                     if($this->product_model->update($idsanpham, $data))
                         {
                          echo 'Thành công';
 //                        $this->data['message'] = 'Lưu sản phẩm thành công';
@@ -118,5 +92,5 @@ class danhsachsanpham extends MY_Controller
                 }
                 //$this->load->view('admin/sanpham/themsanpham', $this->data);
             }
-          }
+   }
 }

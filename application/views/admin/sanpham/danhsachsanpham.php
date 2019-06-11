@@ -2,15 +2,14 @@
     <div class="container-fluid">
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="#">Dashboard</a>
-        </li>
-        <li class="breadcrumb-item active">Tables</li>
+        <?php if(isset($message)){ ?>
+          <div><?php echo $message ?></div>
+        <?php } ?>
       </ol>
 		<!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Data Table Example</div>
+          <i class="fa fa-table"></i> Bảng danh sách sản phẩm</div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -34,7 +33,7 @@
                         <th><?php echo $row->Gia ?></th>
                         <th><?php echo $row->ChatLieu ?></th>
                         <th><a href="#">Chỉnh sửa</a></th>
-                        <th><a href="#">Xóa sản Phẩm</a></th>
+                        <th><a href="<?php echo base_url('/admin/danhsachsanpham/xoa/'.$row->ID)?>">Xóa sản Phẩm</a></th>
                     </tr> 
                   <?php } ?>
                                 
