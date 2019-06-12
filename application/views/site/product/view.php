@@ -1,21 +1,22 @@
 <main>
-		<section class="hero_in tours_detail">
-			<div class="wrapper">
-				<div class="container">
-					<h1 class="fadeInUp"><span></span><?php echo $product->TenSanPham?></h1>
-				</div>
-				<span class="magnific-gallery">
-                                    <a href="<?php echo base_url('upload/product/'.$product->image)?>" class="btn_photos" title="Photo title" data-effect="mfp-zoom-in">Xem Hình Ảnh</a>
+
+                <div id="full-slider-wrapper">
+                    <div id="layerslider" style="width:100%;height:500px;">
+                        <div class="ls-slide" data-ls="slidedelay: 5000; transition2d:85;">
+                                <img src="<?php echo base_url('upload/product/'.$product->image)?>" class="ls-bg" alt="Slide background">
+                                <h3 class="ls-l slide_typo" style="top: 47%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;"><?php echo $product->TenSanPham?></h3>
+                        </div>
+                    </div>
+                    <span class="magnific-gallery">
+                                    <a href="<?php echo base_url('upload/product/'.$product->image)?>" class="btn_photos ls-l btn_1 rounded" title="Photo title" data-effect="mfp-zoom-in">Xem Hình Ảnh</a>
                                     <?php if(is_array($image_list)):?>
 					<?php foreach ($image_list as $img):?>
 				           <a href="<?php echo base_url('upload/product/'.$img)?>" title="Photo title" data-effect="mfp-zoom-in"></a>
                                         <?php endforeach;?>
 				    <?php endif;?>
 
-				</span>
-			</div>
-		</section>
-		<!--/hero_in-->
+                    </span>
+                </div>
 
 		<div class="bg_color_1">
 			<div class="container margin_60_35">

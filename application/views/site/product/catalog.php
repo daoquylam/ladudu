@@ -1,13 +1,25 @@
 <main>
 		
-		<section class="hero_in tours">
+<!--		<section class="hero_in tours">
 			<div class="wrapper">
 				<div class="container">
-					<h1 class="fadeInUp"><span></span><?php echo $danhmuc->Ten ?></h1>
+					<h1 class="fadeInUp"><span></span></?php echo $danhmuc->Ten ?></h1>
 				</div>
 			</div>
-		</section>
+		</section>-->
 		<!--/hero_in-->
+                <div id="full-slider-wrapper">
+                    <div id="layerslider" style="width:100%;height:500px;">
+                        <div class="ls-slide" data-ls="slidedelay: 5000; transition2d:85;">
+                                <img src="<?php echo public_url();?>/site/img/home_slider/01.jpg" class="ls-bg" alt="Slide background">
+                                <h3 class="ls-l slide_typo" style="top: 47%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;"><?php echo $danhmuc->Ten ?></h3>
+                        </div>
+                        <div class="ls-slide" data-ls="slidedelay: 5000; transition2d:85;">
+                                <img src="<?php echo public_url();?>/site/img/home_slider/04.jpg" class="ls-bg" alt="Slide background">
+                                <h3 class="ls-l slide_typo" style="top: 47%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;"><?php echo $danhmuc->Ten ?></h3>
+                        </div>
+                    </div>  
+                </div>
 
 		<div class="container margin_60_35">	
 		<div class="wrapper-grid">
