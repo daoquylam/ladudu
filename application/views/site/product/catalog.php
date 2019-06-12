@@ -17,7 +17,7 @@
 					<div class="box_grid">
 						<figure>
 
-							<a href="<?php echo base_url('/product/view/'.$row->ID)?>"><img src="<?php echo base_url('upload/product/'.$row->Imagee)?>" class="img-fluid" alt="" width="800" height="533"></a>
+							<a href="<?php echo base_url('/product/view/'.$row->ID)?>"><img src="<?php echo base_url('upload/product/'.$row->image)?>" class="img-fluid" alt="" width="800" height="533"></a>
 							
 							<div class="read_more"><span>Read more</span></div>
 						</figure>

@@ -20,7 +20,7 @@
 					<div class="dropdown-menu">
 						<ul>
 							<li><a href="#">Tên: <?php echo $_SESSION['user_info']->HoTen ?></a></li>
-                                                        <li><a href="#">Email: <?php echo $_SESSION['user_info']->Email ?></a></li>
+                                                        <li><a href="<?php echo base_url('danhsachdonhang'); ?>">Đơn Hàng Của Bạn</a></li>
 							<li><a href="<?php echo base_url('login/logout') ?>">Logout</a></li>
 						</ul>
 					</div>
@@ -44,8 +44,8 @@
 				<li><span><a href="<?php echo base_url('home') ?>">Trang chủ</a></span></li>
 				<li><span><a href="<?php echo base_url('product/catalog/1') ?>">Gỗ Nguyên Liệu</a></span></li>
 				<li><span><a href="<?php echo base_url('product/catalog/2') ?>">Nội thất gỗ</a></span></li>
-				<li><span><a href="about.html">Giới thiệu</a></span></li>
-				<li><span><a href="contacts.html">Liên hệ</a></span></li>
+				<li><span><a href="#">Giới thiệu</a></span></li>
+				<li><span><a href="#">Liên hệ</a></span></li>
 				<li><span><a href=""></a></span></li>
 				<li><span><a href=""></a></span></li>
 			</ul>
